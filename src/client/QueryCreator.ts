@@ -14,7 +14,9 @@ export class QueryCreator {
         const page = await this.client.openPage('https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx');
 
         await page.waitForSelector('input[name=txtcedula]');
-        await page.evaluate(() => ((document.getElementById('txtcedula') as HTMLInputElement).value = dni));
+
+        await page.type('input[name=txtcedula]', dni);
+
         await page.click('#btnConsultaCedula');
         await page.waitForSelector('#UpdatePanel4');
 

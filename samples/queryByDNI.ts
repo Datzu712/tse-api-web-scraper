@@ -1,11 +1,12 @@
-import { TseClient } from '@tse/client';
+import { TseClient } from '../src/client/TseClient';
 
 async function start() {
     const client = new TseClient();
     await client.start();
-    const person = await client.getPersonByDNI('801330617');
+
+    const person = await client.getPersonByDNI('');
+
     console.log(person);
-    await client.closePage();
-    await client.closeBrowser();
+    await Promise.resolve(new Promise((resolve) => setTimeout(resolve, 2000)));
 }
 start();

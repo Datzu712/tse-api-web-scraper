@@ -4,7 +4,6 @@
           "moduleResolution": "node",
           "declaration": true,
           "sourceMap": true,
-          "outDir": "dist",
           "emitDecoratorMetadata": true,
           "experimentalDecorators": true,
           "useUnknownInCatchVariables": false,

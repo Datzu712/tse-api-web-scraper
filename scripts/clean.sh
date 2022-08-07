@@ -5,7 +5,7 @@ do
     # check if the filename ends with .js or .js.map or .d.ts
     if [[ $file == *".js"* || $file == *".js.map"* || $file == *".d.ts"* ]]
     then
-        if [[ $file == *".json"* ]]
+        if [[ $file == *".json"* || $file == *"node_modules"* ]]
         then
             # skip json files
             continue

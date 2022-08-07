@@ -17,7 +17,7 @@ export class Person {
     readonly dni: string;
     readonly nationality: string;
     readonly age: number;
-    readonly birthDay: Date;
+    readonly birthDay: string;
     readonly isMarginal: boolean;
     readonly alias: string | null;
     readonly fatherName: string;
@@ -30,11 +30,12 @@ export class Person {
     children: Person[] = [];
 
     constructor(data: QueryPersonDataValues) {
+        console.log(data.dateOfBirth);
         this.fullName = data.fullName;
         this.dni = data.dni;
         this.nationality = data.nationality;
         this.age = parseInt(data.age);
-        this.birthDay = new Date(data.dateOfBirth);
+        this.birthDay = data.dateOfBirth;
         this.isMarginal = data.isMarginal === 'SI';
         this.alias = data.alias || null;
         this.fatherName = data.fatherName;

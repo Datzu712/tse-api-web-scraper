@@ -21,7 +21,7 @@ export class TseClient {
      * @publicApi
      */
     public async start() {
-        this.browser = await launch({ headless: this.config?.headless });
+        this.browser = await launch({ headless: this.config?.headless, ignoreDefaultArgs: ['--disable-extensions'] });
     }
 
     public async openPage(url: string): Promise<Page> {
