@@ -1,12 +1,13 @@
 import { TseClient } from '../src/client/TseClient';
 
+const DNIs = ['PUT A LIST OF DNI HERE'];
+
 async function start() {
-    const client = new TseClient();
+    const client = new TseClient({ headless: false });
     await client.start();
 
-    const person = await client.getPersonByDNI('');
-
-    console.log(person);
-    await Promise.resolve(new Promise((resolve) => setTimeout(resolve, 2000)));
+    for (const DNI of DNIs) {
+        client.getPersonByDNI(DNI).then(console.log);
+    }
 }
 start();

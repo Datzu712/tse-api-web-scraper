@@ -30,7 +30,6 @@ export class Person {
     children: Person[] = [];
 
     constructor(data: QueryPersonDataValues) {
-        console.log(data.dateOfBirth);
         this.fullName = data.fullName;
         this.dni = data.dni;
         this.nationality = data.nationality;
