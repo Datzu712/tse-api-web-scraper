@@ -1,21 +1,28 @@
 {
     "compilerOptions": {
-          "module": "CommonJS",
-          "moduleResolution": "node",
-          "declaration": true,
-          "sourceMap": true,
-          "emitDecoratorMetadata": true,
-          "experimentalDecorators": true,
-          "useUnknownInCatchVariables": false,
-          "removeComments": true,
-          "target": "ES2021",
-          "forceConsistentCasingInFileNames": true,
-          "esModuleInterop": true,
-          "strict": true,
-          "allowJs": true,
-          "paths": {
-              "@tse/client": ["./src/client/TseClient"],
-              "@tse/client*": ["./src/client/TseClient"],
-          }
-      },
-  }
+        "module": "CommonJS",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "ES2024",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "incremental": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "strictBindCallApply": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "preserveSymlinks": false,
+        "types": [
+            "node"
+        ],
+    },
+    "include": [
+        "./samples/**/*.ts",
+    ],
+}
