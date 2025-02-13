@@ -1,4 +1,4 @@
-export interface QueryPersonDataValues {
+export interface PersonDatavalues {
     fullName: string;
     dni: string;
     dateOfBirth: string;
@@ -29,7 +29,7 @@ export class Person {
     mother: Person | null = null;
     children: Person[] = [];
 
-    constructor(data: QueryPersonDataValues) {
+    constructor(data: PersonDatavalues) {
         this.fullName = data.fullName;
         this.dni = data.dni;
         this.nationality = data.nationality;
